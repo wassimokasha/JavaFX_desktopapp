@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_project.budget.BudgetingController">
+    <padding>
+        <Insets bottom="40" left="40" right="40" top="40" />
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" maxWidth="Infinity" minWidth="100" prefWidth="100" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="200" prefWidth="200" />
+    </columnConstraints>
+    <!-- Add Header Label -->
+    <Label text="Zero-based expenses" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.rowSpan="1">
+        <font>
+            <Font name="Arial" size="24" />
+        </font>
+        <GridPane.margin>
+            <Insets bottom="20" left="0" right="0" top="20" />
+        </GridPane.margin>
+    </Label>
+    <!-- Add expense Label -->
+    <Label text="Expense: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <!-- Add expense Text Field -->
+    <TextField onKeyPressed="#numericOnly" fx:id="zero_expense" prefHeight="40" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <!-- Add Submit Button -->
+    <Button onAction="#zero_submit" fx:id="submitButton_z" defaultButton="true" prefHeight="40" prefWidth="100" text="Submit" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.rowSpan="1">
+        <GridPane.margin>
+            <Insets bottom="20" left="0" right="0" top="20" />
+        </GridPane.margin>
+    </Button>
+    <!-- Add analytics Button -->
+   <Button onAction="#getAnalytics" fx:id="analytics" defaultButton="true" prefHeight="40" prefWidth="100" text="Analytics" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
